@@ -1,9 +1,3 @@
-
-
-console.log('js is running on the browser!');
-// fetch('https://puzzle.mead.io/puzzle').then((response)=> response.json().then((data)=>console.log(data)));
-
-
 const formselected=document.querySelector('form');
 const inputselected=document.querySelector('input');
 const item1=document.querySelector('#item-1');
