@@ -9,7 +9,7 @@ request({url,json:true},(error,{body})=>{
     {
        callback("unable to connect to the weather app",undefined);
     }   //while url is not all correct
-    else if(body.features.length==0)
+    else if(body.message || body.features.length==0)
     {
          callback('unable to find the location,try another location',undefined);
     }
@@ -18,7 +18,6 @@ request({url,json:true},(error,{body})=>{
        const longitude=body.features[0].geometry.coordinates[0];
        const latitude=body.features[0].geometry.coordinates[1];
        const location=body.features[0].place_name;
-       //console.log(longitude,latitude);
       callback(undefined,{longitude,latitude,location});
     }
 

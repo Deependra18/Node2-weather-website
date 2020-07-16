@@ -9,7 +9,7 @@ const forecast=(longitude,latitude,callback)=>
      else if(body.message)
      callback('unable to detect this location please try another location',undefined);
      else
-     callback(undefined,`Clouds status: ${body.weather[0].description }, and the temperature of location is: ${body.main.temp}°C and Humidity is: ${body.main.humidity}% , and Min Temp: ${body.main.temp_min}, and Max temp: ${body.main.temp_max}`); 
+     callback(undefined,`Clouds status: ${body.weather[0].description }, and the temperature of location is: ${body.main.temp}°C and Humidity is: ${body.main.humidity}% , and Min Temp: ${body.main.temp_min}°C, and Max temp: ${body.main.temp_max}°C`); 
  })
 }
 
