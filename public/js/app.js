@@ -7,7 +7,7 @@ formselected.addEventListener('submit',(e)=>{
     const location=inputselected.value;
     item1.textContent='Loading...';
     item2.textContent='';
-fetch(`http://localhost:3000/weather?address=${location}`).then((response)=>
+fetch(`/weather?address=${location}`).then((response)=>
 {  response.json().then((data)=>{
     if(data.error)
       item1.textContent=data.error;
